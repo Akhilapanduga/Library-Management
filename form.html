@@ -54,6 +54,7 @@
       //  jquery for searching
        $("#search_btn").click(function(){
           $.get("search.php",{}, function(response){
+               console.log(response);
                var jsonData = JSON.parse(response);
                if (jsonData.Result === "True") {
                   var booksContainer = $("#search_response");
